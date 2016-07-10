@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Movement date:</strong>
+  <%= @account_movement.movement_date %>
+</p>
+
+<p>
+  <strong>Concept:</strong>
+  <%= @account_movement.concept %>
+</p>
+
+<p>
+  <strong>Credit:</strong>
+  <%= @account_movement.credit %>
+</p>
+
+<p>
+  <strong>Debit:</strong>
+  <%= @account_movement.debit %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @account_movement.balance %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @account_movement.account %>
+</p>
+
+<%= link_to 'Edit', edit_account_movement_path(@account_movement) %> |
+<%= link_to 'Back', account_movements_path %>
