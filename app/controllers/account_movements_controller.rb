@@ -1,10 +1,12 @@
 class AccountMovementsController < ApplicationController
+  # before_action :set_account, only: [:show, :edit, :update, :destroy]
   before_action :set_account_movement, only: [:show, :edit, :update, :destroy]
 
   # GET /account_movements
   # GET /account_movements.json
   def index
-    @account_movements = AccountMovement.all
+    @account = Account.find(params[:account_id])
+    @account_movements = @account.account_movements
   end
 
   # GET /account_movements/1
@@ -14,6 +16,7 @@ class AccountMovementsController < ApplicationController
 
   # GET /account_movements/new
   def new
+    @account = Account.find(params[:account_id])
     @account_movement = AccountMovement.new
   end
 

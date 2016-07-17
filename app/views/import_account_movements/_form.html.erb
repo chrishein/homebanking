@@ -1,0 +1,13 @@
+<%= simple_form_for([@account, @import_account_movements],
+                    :url => account_import_account_movements_path(@account),
+                    :method => :post,
+                    html: {multipart: true}) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :file, as: :file %>
+  <%=f.input :remove_existent_movements, as: :boolean %>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

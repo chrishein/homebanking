@@ -4,7 +4,12 @@ class AccountsController < ApplicationController
   # GET /accounts
   # GET /accounts.json
   def index
-    @accounts = Account.all
+    if !params[:client_id].nil?
+      @client = Client.find(params[:client_id])
+      @accounts = @client.accounts
+    else
+      @accounts = current_user.accounts
+    end
   end
 
   # GET /accounts/1

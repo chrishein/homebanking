@@ -13,7 +13,7 @@
               <th>Name</th>
               <th>Currency</th>
               <th>Client</th>
-              <th colspan="3"></th>
+              <th colspan="4"></th>
             </tr>
           </thead>
 
@@ -21,12 +21,13 @@
             <% @accounts.each do |account| %>
               <tr>
                 <td>
-                  <%= link_to account_movements_path do %>
+                  <%= link_to account_account_movements_path(account) do %>
                     <%= account.name %>
                   <% end %>
                 </td>
                 <td><%= account.currency %></td>
                 <td><%= account.client.name %></td>
+                <td><%= link_to 'Import Movements', new_account_import_account_movement_path(account) %></td>
                 <td><%= link_to 'Show', account %></td>
                 <td><%= link_to 'Edit', edit_account_path(account) %></td>
                 <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
