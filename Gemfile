@@ -13,6 +13,7 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'devise', '~> 4.0'
 gem "font-awesome-rails"
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
