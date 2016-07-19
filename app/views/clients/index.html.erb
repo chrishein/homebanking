@@ -23,9 +23,9 @@
                     <%= client.name %>
                   <% end %>
                 </td>
-                <td><%= link_to 'Show', client %></td>
-                <td><%= link_to 'Edit', edit_client_path(client) %></td>
-                <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Show', client, class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to 'Edit', edit_client_path(client), class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-xs' %></td>
               </tr>
             <% end %>
           </tbody>
@@ -33,4 +33,4 @@
       </div>
     </div>
   </div>
-<%= link_to 'New Client', new_client_path %>
+<%= link_to 'New Client', new_client_path, class: 'btn btn-primary btn-sm' %>

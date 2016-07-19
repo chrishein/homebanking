@@ -27,10 +27,13 @@
                 </td>
                 <td><%= account.currency %></td>
                 <td><%= account.client.name %></td>
-                <td><%= link_to 'Import Movements', new_account_import_account_movement_path(account) %></td>
-                <td><%= link_to 'Show', account %></td>
-                <td><%= link_to 'Edit', edit_account_path(account) %></td>
-                <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td>
+                <%= link_to 'Import Movements',
+                            new_account_import_account_movement_path(account),
+                            class: 'btn btn-primary btn-xs' %></td>
+                <td><%= link_to 'Show', account, class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to 'Edit', edit_account_path(account), class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-xs' %></td>
               </tr>
             <% end %>
           </tbody>
@@ -38,4 +41,4 @@
       </div>
     </div>
   </div>
-<%= link_to 'New Account', new_account_path %>
+<%= link_to 'New Account', new_account_path, class: 'btn btn-primary btn-sm' %>
