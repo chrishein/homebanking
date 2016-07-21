@@ -13,7 +13,9 @@
               <th>Name</th>
               <th>Currency</th>
               <th>Client</th>
+              <% if can? :manage, :account %>
               <th colspan="4"></th>
+              <% end %>
             </tr>
           </thead>
 
@@ -27,6 +29,7 @@
                 </td>
                 <td><%= account.currency %></td>
                 <td><%= account.client.name %></td>
+                <% if can? :manage, :account %>
                 <td>
                 <%= link_to 'Import Movements',
                             new_account_import_account_movement_path(account),
@@ -34,6 +37,7 @@
                 <td><%= link_to 'Show', account, class: 'btn btn-default btn-xs' %></td>
                 <td><%= link_to 'Edit', edit_account_path(account), class: 'btn btn-default btn-xs' %></td>
                 <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-xs' %></td>
+                <% end %>
               </tr>
             <% end %>
           </tbody>
@@ -41,4 +45,6 @@
       </div>
     </div>
   </div>
+<% if can? :manage, :account %>
 <%= link_to 'New Account', new_account_path, class: 'btn btn-primary btn-sm' %>
+<% end %>

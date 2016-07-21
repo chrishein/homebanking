@@ -1,4 +1,6 @@
 class ImportAccountMovementsController < ApplicationController
+  authorize_resource :class => false
+  
   def new
     @account = Account.find(params[:account_id])
     @import_account_movements = ImportAccountMovements.new

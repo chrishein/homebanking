@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'devise', '~> 4.0'
+gem 'cancancan', '~> 1.15.0'
 gem "font-awesome-rails"
 gem 'puma'
 

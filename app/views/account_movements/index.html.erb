@@ -36,5 +36,6 @@
       </div>
     </div>
   </div>
-
+<% if can? :manage, :account_movement %>
 <%= link_to 'New Account movement', new_account_account_movement_path(@account), class: 'btn btn-primary btn-sm' %>
+<% end %>

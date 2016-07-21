@@ -1,5 +1,5 @@
 class AccountMovementsController < ApplicationController
-  # before_action :set_account, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
   before_action :set_account_movement, only: [:show, :edit, :update, :destroy]
 
   # GET /account_movements

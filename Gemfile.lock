@@ -52,6 +52,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.5)
+    cancancan (1.15.0)
     capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
@@ -225,6 +226,7 @@ DEPENDENCIES
   better_errors
   bootstrap-sass
   byebug
+  cancancan (~> 1.15.0)
   capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
