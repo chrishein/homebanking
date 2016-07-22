@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'simple_form'
+gem 'will_paginate', '~> 3.1.0'
 gem 'devise', '~> 4.0'
 gem 'cancancan', '~> 1.15.0'
 gem "font-awesome-rails"

@@ -34,6 +34,7 @@
           </tbody>
         </table>
       </div>
+      <%= will_paginate @account_movements %>
     </div>
   </div>
 <% if can? :manage, :account_movement %>

@@ -7,9 +7,9 @@ class AccountsController < ApplicationController
   def index
     if !params[:client_id].nil?
       @client = Client.find(params[:client_id])
-      @accounts = @client.accounts
+      @accounts = @client.accounts.paginate(page: params[:page], per_page: 50)
     else
-      @accounts = current_user.accounts
+      @accounts = current_user.accounts.paginate(page: params[:page], per_page: 50)
     end
   end
 
