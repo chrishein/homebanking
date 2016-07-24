@@ -32,6 +32,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def update_password
+    @user = User.find(current_user.id)
+    if @user.update(params.require(:user).permit(:password, :password_confirmation))
+      sign_in @user, :bypass => true
+      redirect_to root_path
+    else
+      render "edit"
+    end
+  end
+
   def create
     @user = User.new(user_params)
 
