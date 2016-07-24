@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   has_and_belongs_to_many :clients
 
+  validates :email, presence: true, uniqueness: true
+  validates :role, presence: true
+
   # Include default devise modules. Others available are:
   # :omniauthable
   devise :database_authenticatable, :registerable,

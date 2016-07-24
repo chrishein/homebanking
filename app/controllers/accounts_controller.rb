@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class AccountsController < ApplicationController
   load_and_authorize_resource
   before_action :set_account, only: [:show, :edit, :update, :destroy]
@@ -8,6 +10,9 @@ class AccountsController < ApplicationController
     if !params[:client_id].nil?
       @client = Client.find(params[:client_id])
       @accounts = @client.accounts.paginate(page: params[:page], per_page: 50)
+    elsif current_user.clients.empty?
+      flash[:error] = "You have no clients or accounts associated to your user"
+      @accounts = [].paginate(page: params[:page], per_page: 50)
     else
       @accounts = current_user.accounts.paginate(page: params[:page], per_page: 50)
     end
