@@ -72,6 +72,30 @@ class AccountsController < ApplicationController
     end
   end
 
+  def download
+    @account = Account.find(params[:account_id])
+
+    if current_user.accounts.include? @account
+      @account_movements = @account.account_movements
+      respond_to do |format|
+        format.xlsx do
+          p = Axlsx::Package.new
+          wb = p.workbook
+          wb.add_worksheet(name: "Account Movements") do |sheet|
+            sheet.add_row ["Movement Date", "Concept", "Credit", "Debit", "Balance"]
+            @account_movements.each do |m|
+              sheet.add_row [m.movement_date, m.concept, m.credit, m.debit, m.balance]
+            end
+          end
+          send_data p.to_stream.read, type: "application/xlsx", filename: "#{@account.to_s}.xlsx"
+        end
+      end
+    else
+      format.html { redirect_to accounts_url, error: 'Account is not associated with current user.' }
+      format.json { head :no_content }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account

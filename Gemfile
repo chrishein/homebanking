@@ -16,6 +16,8 @@ gem 'devise', '~> 4.0'
 gem 'cancancan', '~> 1.15.0'
 gem "font-awesome-rails"
 gem 'puma'
+gem 'axlsx', '2.1.0.pre'
+gem 'zip-zip'
 
 group :development, :test do
   gem 'byebug'

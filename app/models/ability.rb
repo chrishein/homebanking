@@ -8,6 +8,7 @@ class Ability
       can :manage, :all
     else
       can :read, [Client, Account, AccountMovement]
+      can :download, Account
     end
   end
 end
