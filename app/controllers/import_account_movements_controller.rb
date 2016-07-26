@@ -1,6 +1,6 @@
 class ImportAccountMovementsController < ApplicationController
   authorize_resource :class => false
-  
+
   def new
     @account = Account.find(params[:account_id])
     @import_account_movements = ImportAccountMovements.new
@@ -13,8 +13,9 @@ class ImportAccountMovementsController < ApplicationController
     if params[:import_account_movements][:remove_existent_movements] == "1"
       @account.account_movements = []
     end
+
     AccountMovement.import(@account,
-                           params[:import_account_movements][:file].tempfile)
+                           params[:import_account_movements][:file])
 
     respond_to do |format|
       format.html { redirect_to accounts_url, notice: 'Movements were successfully imported.' }

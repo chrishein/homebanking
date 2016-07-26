@@ -18,6 +18,8 @@ gem "font-awesome-rails"
 gem 'puma'
 gem 'axlsx', '2.1.0.pre'
 gem 'zip-zip'
+gem 'roo'
+gem 'roo-xls'
 
 group :development, :test do
   gem 'byebug'
