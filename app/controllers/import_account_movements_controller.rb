@@ -14,8 +14,14 @@ class ImportAccountMovementsController < ApplicationController
       @account.account_movements = []
     end
 
-    AccountMovement.import(@account,
-                           params[:import_account_movements][:file])
+    begin
+      AccountMovement.import(@account,
+                             params[:import_account_movements][:file])
+    rescue => e
+      redirect_to new_account_import_account_movement_path(@account),
+        :alert => e.message
+        return
+    end
 
     respond_to do |format|
       format.html { redirect_to accounts_url, notice: 'Movements were successfully imported.' }
