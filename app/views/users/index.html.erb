@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Users</h1>
+        <h1 class="page-header"><%= t('.users') %></h1>
     </div>
 </div>
 
@@ -26,9 +26,9 @@
                   <% end %>
                 </td>
                 <% if can? :manage, :user %>
-                <td><%= link_to 'Show', user, class: 'btn btn-default btn-xs' %></td>
-                <td><%= link_to 'Edit', edit_user_path(user), class: 'btn btn-default btn-xs' %></td>
-                <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to t('actions.show'), user, class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to t('actions.edit'), edit_user_path(user), class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to t('actions.destroy'), user, method: :delete, data: { confirm: t('actions.are_you_sure') }, class: 'btn btn-default btn-xs' %></td>
                 <% end %>
               </tr>
             <% end %>
@@ -39,5 +39,5 @@
     </div>
   </div>
 <% if can? :manage, :user %>
-<%= link_to 'New User', new_user_path, class: 'btn btn-primary btn-sm' %>
+<%= link_to t('.new_user'), new_user_path, class: 'btn btn-primary btn-sm' %>
 <% end %>

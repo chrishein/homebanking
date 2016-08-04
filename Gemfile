@@ -21,6 +21,7 @@ gem 'zip-zip'
 gem 'roo'
 gem 'roo-xls'
 gem 'highline', '~> 1.7.8'
+gem 'rails-i18n', '~> 4.0.0'
 
 group :development, :test do
   gem 'byebug'

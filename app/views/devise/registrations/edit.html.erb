@@ -13,12 +13,12 @@
 
     <%= f.input :password, autocomplete: "off", required: true %>
     <%= f.input :password_confirmation, required: true %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <%= f.input :current_password, hint: t('.we_need_your_current_password_to_confirm_your_changes'), required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, t('actions.update') %>
   </div>
 <% end %>
 
-<%= link_to "Back", :back %>
+<%= link_to t('actions.back'), :back %>

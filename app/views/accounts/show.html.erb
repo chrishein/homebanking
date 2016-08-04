@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= Account.human_attribute_name('name') %>:</strong>
   <%= @account.name %>
 </p>
 
 <p>
-  <strong>Currency:</strong>
+  <strong><%= Account.human_attribute_name('currency') %>:</strong>
   <%= @account.currency %>
 </p>
 
 <p>
-  <strong>Client:</strong>
-  <%= @account.client %>
+  <strong><%= Account.human_attribute_name('client') %>:</strong>
+  <%= @account.client.name %>
 </p>
 
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+<%= link_to t('actions.edit'), edit_account_path(@account) %> |
+<%= link_to t('actions.back'), accounts_path %>

@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Accounts</h1>
+        <h1 class="page-header"><%= t('.accounts') %></h1>
     </div>
 </div>
 
@@ -10,9 +10,9 @@
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Currency</th>
-              <th>Client</th>
+              <th><%= t('.name') %></th>
+              <th><%= t('.currency') %></th>
+              <th><%= t('.client') %></th>
               <% if can? :manage, :account %>
               <th colspan="4"></th>
               <% end %>
@@ -31,12 +31,12 @@
                 <td><%= account.client.name %></td>
                 <% if can? :manage, :account %>
                 <td>
-                <%= link_to 'Import Movements',
+                <%= link_to t('.import_account_movements'),
                             new_account_import_account_movement_path(account),
                             class: 'btn btn-primary btn-xs' %></td>
-                <td><%= link_to 'Show', account, class: 'btn btn-default btn-xs' %></td>
-                <td><%= link_to 'Edit', edit_account_path(account), class: 'btn btn-default btn-xs' %></td>
-                <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to t('actions.show'), account, class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to t('actions.edit'), edit_account_path(account), class: 'btn btn-default btn-xs' %></td>
+                <td><%= link_to t('actions.destroy'), account, method: :delete, data: { confirm: t('actions.are_you_sure') }, class: 'btn btn-default btn-xs' %></td>
                 <% end %>
               </tr>
             <% end %>
@@ -47,5 +47,5 @@
     </div>
   </div>
 <% if can? :manage, :account %>
-<%= link_to 'New Account', new_account_path, class: 'btn btn-primary btn-sm' %>
+<%= link_to t('.new_account'), new_account_path, class: 'btn btn-primary btn-sm' %>
 <% end %>
