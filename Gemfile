@@ -20,6 +20,7 @@ gem 'axlsx', '2.1.0.pre'
 gem 'zip-zip'
 gem 'roo'
 gem 'roo-xls'
+gem 'highline', '~> 1.7.8'
 
 group :development, :test do
   gem 'byebug'
