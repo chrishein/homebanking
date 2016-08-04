@@ -1,0 +1,97 @@
+es:
+  actions:
+    show: Ver
+    edit: Editar
+    destroy: Eliminar
+    back: Volver
+    are_you_sure: ¿Esta seguro?
+    update: Guardar
+  visitors:
+    index:
+      welcome: Bienvenido
+  layouts:
+    navigation:
+      toggle_navigation: Alternar navegación
+      change_password: Cambiar contraseña
+      log_out: Cerrar sessión
+      clients: Clientes
+      accounts: Cuentas
+      users: Usuarios
+  activerecord:
+    attributes:
+      client:
+        name: Nombre
+      account:
+        name: Nombre
+        currency: Moneda
+        client: Cliente
+      account_movement:
+        movement_date: Fecha
+        concept: Concepto
+        credit: Crédito
+        debit: Débito
+        balance: Balance
+    models:
+      client: Cliente
+      account: Cuenta
+      account_movement: Movimiento
+  activemodel:
+    attributes:
+      import_account_movements:
+        file: Archivo
+        remove_existent_movements: Eliminar movimientos
+    models:
+      import_account_movements: Importar movimientos
+  clients:
+    index:
+      clients: Clientes
+      name: Nombre
+      new_client: Crear cliente
+    new:
+      title: Nuevo cliente
+    edit:
+      title: Editar cliente
+    create:
+      notice: Cliente creado con éxito
+  accounts:
+    index:
+      accounts: Cuentas
+      name: Nombre
+      currency: Moneda
+      client: Cliente
+      import_account_movements: Importar movimientos
+      new_account: Crear cuenta
+    new:
+      title: Nueva cuenta
+    edit:
+      title: Editar cuenta
+    create:
+      notice: Cuenta creada con éxito
+  account_movements:
+    index:
+      account_movements: Movimientos
+      movement_date: Fecha
+      concept: Concepto
+      credit: Crédito
+      debit: Débito
+      balance: Balance
+      new_account_movement: Crear movimiento
+      export_account_movements: Exportar movimientos
+    create:
+      notice: Movimiento creado con éxito
+    new:
+      title: Nuevo movimiento
+  import_account_movements:
+    new:
+      title: Importar movimientos
+      new_import_account_movements: Importar movimientos
+    create:
+      notice: Movimientos importados con éxito
+  users:
+    index:
+      users: Usuarios
+      new_user: Crear usuario
+    new:
+      title: Nuevo usuario
+    edit:
+      title: Editar usuario

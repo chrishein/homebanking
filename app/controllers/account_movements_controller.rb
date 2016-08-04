@@ -17,7 +17,7 @@ class AccountMovementsController < ApplicationController
   # GET /account_movements/new
   def new
     @account = Account.find(params[:account_id])
-    @account_movement = AccountMovement.new
+    @account_movement = AccountMovement.new(params.permit(:account_id))
   end
 
   # GET /account_movements/1/edit
@@ -31,7 +31,8 @@ class AccountMovementsController < ApplicationController
 
     respond_to do |format|
       if @account_movement.save
-        format.html { redirect_to @account_movement, notice: 'Account movement was successfully created.' }
+        format.html { redirect_to account_account_movements_url(@account_movement.account_id),
+                                  notice: t('.notice') }
         format.json { render :show, status: :created, location: @account_movement }
       else
         format.html { render :new }

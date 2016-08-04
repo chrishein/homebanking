@@ -24,7 +24,7 @@ class ImportAccountMovementsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to accounts_url, notice: 'Movements were successfully imported.' }
+      format.html { redirect_to accounts_url, notice: t('.notice') }
     end
   end
 end
