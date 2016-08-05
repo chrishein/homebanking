@@ -27,11 +27,12 @@ class AccountMovementsController < ApplicationController
   # POST /account_movements
   # POST /account_movements.json
   def create
+    @account = Account.find(params[:account_id])
     @account_movement = AccountMovement.new(account_movement_params)
 
     respond_to do |format|
       if @account_movement.save
-        format.html { redirect_to account_account_movements_url(@account_movement.account_id),
+        format.html { redirect_to account_account_movements_url([@account, @account_movement]),
                                   notice: t('.notice') }
         format.json { render :show, status: :created, location: @account_movement }
       else
