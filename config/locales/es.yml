@@ -1,4 +1,8 @@
 es:
+  number:
+   currency:
+      format:
+        format: '%n'
   actions:
     show: Ver
     edit: Editar
