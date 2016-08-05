@@ -4,6 +4,12 @@ class AccountMovement < ActiveRecord::Base
   belongs_to :account
   validates :concept, presence: true
 
+  validates_numericality_of :debit, allow_nil: true
+  validates_numericality_of :credit, allow_nil: true
+  validates_numericality_of :balance, allow_nil: true
+
+  validate :credit_xor_debit
+
   default_scope { order('movement_date DESC') }
 
   def self.import(account, uploaded_file)
@@ -26,4 +32,11 @@ class AccountMovement < ActiveRecord::Base
     end
   end
 
+  private
+
+    def credit_xor_debit
+      unless credit.blank? ^ debit.blank?
+        errors.add(:base, I18n.t('account_movements.create.credit_or_debit_required'))
+      end
+    end
 end

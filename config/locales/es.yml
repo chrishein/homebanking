@@ -31,6 +31,7 @@ es:
         credit: Crédito
         debit: Débito
         balance: Balance
+        account: Cuenta
     models:
       client: Cliente
       account: Cuenta
@@ -53,6 +54,10 @@ es:
       title: Editar cliente
     create:
       notice: Cliente creado con éxito
+    update:
+      notice: Cliente actualizada con éxito
+    destroy:
+      notice: Cliente eliminado con éxito
   accounts:
     index:
       accounts: Cuentas
@@ -67,6 +72,10 @@ es:
       title: Editar cuenta
     create:
       notice: Cuenta creada con éxito
+    update:
+      notice: Cuenta actualizada con éxito
+    destroy:
+      notice: Cuenta eliminada con éxito
   account_movements:
     index:
       account_movements: Movimientos
@@ -79,6 +88,11 @@ es:
       export_account_movements: Exportar movimientos
     create:
       notice: Movimiento creado con éxito
+      credit_or_debit_required: Crédito o débito requerido. Solo uno debe completarse.
+    update:
+      notice: Movimiento actualizado con éxito
+    destroy:
+      notice: Movimiento eliminado con éxito
     new:
       title: Nuevo movimiento
   import_account_movements:
@@ -95,3 +109,9 @@ es:
       title: Nuevo usuario
     edit:
       title: Editar usuario
+    create:
+      notice: Usuario creado con éxito
+    update:
+      notice: Usuario actualizado con éxito
+    destroy:
+      notice: Usuario eliminado con éxito

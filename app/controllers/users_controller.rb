@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     end
 
     if @user.update_attributes(user_params)
-      redirect_to users_path, :notice => "User updated."
+      redirect_to users_path, :notice => t('.notice')
     else
       redirect_to users_path, :alert => "Unable to update user."
     end
@@ -47,7 +47,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: t('.notice') }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
   def destroy
     user = User.find(params[:id])
     user.destroy
-    redirect_to users_path, :notice => "User deleted."
+    redirect_to users_path, :notice => t('.notice')
   end
 
   private

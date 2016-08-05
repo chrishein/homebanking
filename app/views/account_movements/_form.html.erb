@@ -1,5 +1,8 @@
 <%= simple_form_for([@account, @account_movement]) do |f| %>
   <%= f.error_notification %>
+  <div class="has-error">
+    <%= f.error :base %>
+  </div>
 
   <div class="form-inputs">
     <%= f.input :movement_date %>
