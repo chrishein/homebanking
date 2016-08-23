@@ -41,7 +41,7 @@ class AccountMovement < ActiveRecord::Base
       movement_hash = movement_hash.symbolize_keys
       movement_hash[:account] = account
       movement_hash.select { |k, v| NUMERIC_FIELDS.include?(k) }.each do |k, v|
-        unless movement_hash[k].nil?
+        if !movement_hash[k].nil? && movement_hash[k].is_a?(String)
           movement_hash[k] = movement_hash[k].gsub(THOUSANDS_SEPARATOR, '').to_f
         end
       end
