@@ -10,7 +10,7 @@ class AccountMovement < ActiveRecord::Base
 
   validate :credit_xor_debit
 
-  default_scope { order('movement_date DESC') }
+  default_scope { order('movement_date DESC, id DESC') }
 
   THOUSANDS_SEPARATOR = ','.freeze
   NUMERIC_FIELDS = [:credit, :debit, :balance].freeze
