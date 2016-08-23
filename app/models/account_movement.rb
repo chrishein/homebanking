@@ -46,6 +46,8 @@ class AccountMovement < ActiveRecord::Base
         end
       end
 
+      movement_hash[:movement_date] = Chronic.parse(movement_hash[:movement_date])
+
       movement_hash
     end
 
