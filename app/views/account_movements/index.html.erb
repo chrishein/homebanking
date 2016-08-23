@@ -24,7 +24,7 @@
           <tbody>
             <% @account_movements.each do |account_movement| %>
               <tr>
-                <td><%= account_movement.movement_date %></td>
+                <td><%= l account_movement.movement_date.to_date, format: :padded %></td>
                 <td><%= account_movement.concept %></td>
                 <td><%= number_to_currency(account_movement.debit) %></td>
                 <td><%= number_to_currency(account_movement.credit) %></td>
