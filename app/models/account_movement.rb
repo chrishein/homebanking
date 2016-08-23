@@ -18,14 +18,19 @@ class AccountMovement < ActiveRecord::Base
   def self.import(account, uploaded_file)
     file = uploaded_file.tempfile
     filename = uploaded_file.original_filename
+    header_converter = lambda { |h| h.downcase.gsub(' ', '_') unless h.nil? }
+
     if filename.end_with?('.csv')
-      CSV.foreach(file, headers: true) do |row|
+      CSV.foreach(file, :headers => true,
+                  :header_converters => header_converter) do |row|
         movement_hash = row.to_hash
         AccountMovement.create!(prepare_movement(movement_hash, account))
       end
     elsif filename.end_with?('.xls') || filename.end_with?('.xlsx')
       spreadsheet = Roo::Excelx.new(uploaded_file.path)
       header = spreadsheet.row(1)
+      header.map!(&header_converter)
+
       (2..spreadsheet.last_row).each do |i|
         movement_hash = Hash[[header, spreadsheet.row(i)].transpose]
         AccountMovement.create!(prepare_movement(movement_hash, account))
