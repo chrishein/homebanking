@@ -15,8 +15,8 @@
             <tr>
               <th><%= t('.movement_date') %></th>
               <th><%= t('.concept') %></th>
-              <th><%= t('.credit') %></th>
               <th><%= t('.debit') %></th>
+              <th><%= t('.credit') %></th>
               <th><%= t('.balance') %></th>
             </tr>
           </thead>
@@ -26,8 +26,8 @@
               <tr>
                 <td><%= account_movement.movement_date %></td>
                 <td><%= account_movement.concept %></td>
-                <td><%= number_to_currency(account_movement.credit) %></td>
                 <td><%= number_to_currency(account_movement.debit) %></td>
+                <td><%= number_to_currency(account_movement.credit) %></td>
                 <td><%= number_to_currency(account_movement.balance) %></td>
               </tr>
             <% end %>
