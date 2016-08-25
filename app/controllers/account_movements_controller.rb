@@ -6,6 +6,7 @@ class AccountMovementsController < ApplicationController
   # GET /account_movements.json
   def index
     @account = Account.find(params[:account_id])
+    authorize! :show, @account
     @account_movements = @account.account_movements.paginate(page: params[:page], per_page: 50)
   end
 

@@ -9,6 +9,7 @@ class AccountsController < ApplicationController
   def index
     if !params[:client_id].nil?
       @client = Client.find(params[:client_id])
+      authorize! :show, @client
       @accounts = @client.accounts.paginate(page: params[:page], per_page: 50)
     elsif current_user.clients.empty?
       flash[:error] = "You have no clients or accounts associated to your user"
