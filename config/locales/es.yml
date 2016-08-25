@@ -6,6 +6,9 @@ es:
   date:
     formats:
       padded: "%d/%m/%Y"
+  unauthorized:
+    manage:
+      all: "No tiene permisos para acceder esta página"
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Siguiente &#8594;"
