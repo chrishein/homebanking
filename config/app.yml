@@ -1,6 +1,6 @@
 development:
-  app_title: <%= ENV['APP_TITLE'] || 'Home Banking' %>
+  app_title: <%= ENV['HB_APP_TITLE'] || 'Home Banking' %>
 test:
-  app_title: <%= ENV['APP_TITLE'] || 'Home Banking' %>
+  app_title: <%= ENV['HB_APP_TITLE'] || 'Home Banking' %>
 production:
-  app_title: <%= ENV['APP_TITLE'] || 'Home Banking' %>
+  app_title: <%= ENV['HB_APP_TITLE'] || 'Home Banking' %>
