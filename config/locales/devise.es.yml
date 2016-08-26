@@ -20,6 +20,8 @@ es:
       confirmed: "Tu cuenta ha sido confirmada."
       send_instructions: "Recibirás un correo electrónico en unos minutos con instrucciones sobre cómo restablecer tu contraseña."
       send_paranoid_instructions: "Si tu correo electrónico existe en nuestra base de datos recibirás un correo electrónico en unos minutos con instrucciones sobre cómo restablecer tu contraseña."
+      new:
+        resend_confirmation_instructions: Reenviar mensaje con enlace de confirmación
     failure:
       already_authenticated: "Ya has iniciado sesión."
       inactive: "Tu cuenta aún no ha sido activada."
@@ -33,10 +35,25 @@ es:
     mailer:
       confirmation_instructions:
         subject: "Instrucciones de confirmación"
+        hello_line: "Bienvenido %{email}!"
+        you_can_confirm_line: "Puedes confirmar tu cuenta de correo electrónico usando el siguiente link:"
+        confirm_my_account: Confirmar mi cuenta
       reset_password_instructions:
         subject: "Instrucciones para restablecer tu contraseña"
+        hello_line: "Hola %{email}!"
+        someone_has_requested_line: Alguien ha solicitado un link para cambiar tu contraseña. Puedes hacerlo a través de este link.
+        change_my_password: Cambiar mi contraseña
+        if_youdidnt_line: Si no pediste este link, puedes ignorar este email.
+        your_password_wont_change_line: Tu contraseña no va a ser cambiada hasta que no ingreses al link y crees una nueva.
+      password_change:
+        hello_line: "Hola %{email}!"
+        we_are_contacting_you_line: Estamos contactandote para confirmarte que tu contraseña ha sido cambiada.
       unlock_instructions:
         subject: "Instrucciones de desbloqueo"
+        hello_line: "Hola %{email}!"
+        your_account_has_been_locked_line: Su cuenta ha sido bloqueada debido a un excesivo número de intentos de ingreso fallidos.
+        click_the_link_line: "Usa el siguiente link para desbloquear tu cuenta:"
+        unlock_my_account: Desbloquear mi cuenta
     omniauth_callbacks:
       failure: "No se te ha podido autorizar de %{kind} debido a \"%{reason}\"."
       success: "Identificado correctamente de %{kind}."
@@ -46,6 +63,15 @@ es:
       send_paranoid_instructions: "Si tu correo electrónico existe en nuestra base de datos, recibirás un enlace para restablecer la contraseña en unos minutos."
       updated: "Tu contraseña ha cambiado correctamente. Has sido identificado correctamente."
       updated_not_active: "Tu contraseña se ha cambiado correctamente."
+      new:
+        forgot_your_password: ¿Olvidaste tu contraseña?
+        send_my_reset_password_instructions: "Enviar instrucciones de cambio de contraseña"
+      edit:
+        change_your_password: Cambia tu contraseña
+        password: Nueva contraseña
+        password_confirmation: Confirmación de la contraseña
+        minimum_password_length: "%{minimum_password_length} caracteres como mínimo"
+        change_my_password: Cambiar mi contraseña
     registrations:
       destroyed: "¡Adiós! Tu cuenta ha sido cancelada. Esperamos volver a verte pronto."
       signed_up: "¡Bienvenido! Has sido identificado."
@@ -67,7 +93,7 @@ es:
         back: Volver
         didn_t_receive_confirmation_instructions: No recibiste instrucciones de confirmación?
         didn_t_receive_unlock_instructions: No recibiste instrucciones de desbloqueo?
-        forgot_your_password: Olvidaste tu contraseña?
+        forgot_your_password: ¿Olvidaste tu contraseña?
         sign_in: Ingresar
         sign_in_with_provider: Ingresar con %{provider}
         sign_up: Registrarse
@@ -75,6 +101,8 @@ es:
       send_instructions: "Recibirás un correo electrónico en unos minutos con instrucciones sobre cómo desbloquear tu cuenta."
       send_paranoid_instructions: "Si tu cuenta existe, recibirás un correo electrónico en unos minutos con instrucciones sobre cómo desbloquear tu cuenta."
       unlocked: "Tu cuenta ha sido desbloqueada. Por favor inicia sesión para continuar."
+      new:
+        resend_unlock_instructions: Reenviar instrucciones de desbloqueo
   errors:
     messages:
       already_confirmed: "ya has sido confirmado, por favor intenta iniciar sesión."
