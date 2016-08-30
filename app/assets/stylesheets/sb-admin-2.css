@@ -214,6 +214,10 @@ body {
     margin-top: 25%;
 }
 
+.login-panel .login-brand {
+  margin-top: 10px;
+}
+
 .flot-chart {
     display: block;
     height: 400px;
