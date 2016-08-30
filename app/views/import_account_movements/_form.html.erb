@@ -5,7 +5,7 @@
   <%= f.error_notification %>
 
   <%= f.input :file, as: :file %>
-  <%=f.input :remove_existent_movements, as: :boolean %>
+  <%= f.input :remove_existent_movements, as: :boolean %>
 
   <div class="form-actions">
     <%= f.button :submit, t('import_account_movements.new.new_import_account_movements'), class: 'btn btn-primary btn-sm' %>
