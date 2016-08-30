@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160717210703) do
+ActiveRecord::Schema.define(version: 20160830155533) do
 
   create_table "account_movements", force: :cascade do |t|
     t.datetime "movement_date"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20160717210703) do
   end
 
   add_index "accounts", ["client_id"], name: "index_accounts_on_client_id"
+
+  create_table "app_settings", force: :cascade do |t|
+    t.string   "app_title"
+    t.string   "logo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "clients", force: :cascade do |t|
     t.string   "name"

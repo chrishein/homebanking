@@ -31,6 +31,7 @@ es:
       clients: Clientes
       accounts: Cuentas
       users: Usuarios
+      app_settings: Configuración
   activerecord:
     attributes:
       client:
@@ -46,6 +47,9 @@ es:
         debit: Débito
         balance: Balance
         account: Cuenta
+      app_setting:
+        app_title: Título
+        logo: Imagen
     models:
       client: Cliente
       account: Cuenta
@@ -129,3 +133,10 @@ es:
       notice: Usuario actualizado con éxito
     destroy:
       notice: Usuario eliminado con éxito
+  app_settings:
+    edit:
+      title: Configuración
+    form:
+      save_app_settings: Guardar configuración
+    update:
+      notice: Configuración actualizada con éxito

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resource :app_settings, :only => [:edit, :update]
   devise_for :users, :skip => [:registrations]
   as :user do
     get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'

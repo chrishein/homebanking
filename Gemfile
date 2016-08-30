@@ -24,6 +24,8 @@ gem 'highline', '~> 1.7.8'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'rollbar'
 gem 'chronic'
+gem 'carrierwave'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'byebug'

@@ -59,6 +59,13 @@
                 <% end %>
               </li>
               <% end %>
+              <% if can? :manage, AppSetting %>
+              <li>
+                <%= link_to edit_app_settings_path do %>
+                  <i class="fa fa-wrench fa-fw"></i> <%= t('.app_settings') %>
+                <% end %>
+              </li>
+              <% end %>
             </ul>
         </div>
         <!-- /.sidebar-collapse -->
