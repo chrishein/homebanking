@@ -24,6 +24,7 @@ gem 'highline', '~> 1.7.8'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'rollbar'
 gem 'chronic'
+gem 'bootsy'
 gem 'carrierwave'
 gem 'cloudinary'
 

@@ -16,6 +16,8 @@
     <% end %>
   </div>
 
+  <%= f.input :home_content, as: :bootsy, :input_html => {:rows => 16, 'data-bootsy-locale' => 'es'} %>
+
   <div class="form-actions">
     <%= f.button :submit, t('.save_app_settings'), class: 'btn btn-primary btn-sm' %>
   </div>

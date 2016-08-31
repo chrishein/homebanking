@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160830155533) do
+ActiveRecord::Schema.define(version: 20160830200156) do
 
   create_table "account_movements", force: :cascade do |t|
     t.datetime "movement_date"
@@ -39,8 +39,23 @@ ActiveRecord::Schema.define(version: 20160830155533) do
   create_table "app_settings", force: :cascade do |t|
     t.string   "app_title"
     t.string   "logo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "home_content"
+  end
+
+  create_table "bootsy_image_galleries", force: :cascade do |t|
+    t.integer  "bootsy_resource_id"
+    t.string   "bootsy_resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bootsy_images", force: :cascade do |t|
+    t.string   "image_file"
+    t.integer  "image_gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "clients", force: :cascade do |t|

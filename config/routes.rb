@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
   resource :app_settings, :only => [:edit, :update]
   devise_for :users, :skip => [:registrations]
   as :user do

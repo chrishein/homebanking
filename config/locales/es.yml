@@ -50,6 +50,7 @@ es:
       app_setting:
         app_title: Título
         logo: Imagen
+        home_content: Contenidos de la página principal
     models:
       client: Cliente
       account: Cuenta
