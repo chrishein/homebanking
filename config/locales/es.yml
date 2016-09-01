@@ -51,6 +51,7 @@ es:
         app_title: Título
         logo: Imagen
         home_content: Contenidos de la página principal
+        remove_logo: Eliminar logo
     models:
       client: Cliente
       account: Cuenta

@@ -9,7 +9,10 @@
       <%= f.input :logo_cache, :as => :hidden %>
       <%= f.input :logo, as: :file %>
       <%= content_tag(:div, class: 'form-group') do %>
-        <% unless @app_setting.logo.nil? %>
+        <% unless @app_setting.logo.url.nil? %>
+          <%= content_tag(:div, class: 'form-group clearfix') do %>
+            <%= f.input :remove_logo, as: :boolean %>
+          <% end %>
           <%= cl_image_tag(@app_setting.logo, :width => 100, :height => 100, :class => 'pull-left') %>
         <% end %>
       <% end %>
