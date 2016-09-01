@@ -1,5 +1,7 @@
 <div class="row">
     <div class="col-lg-12 home_content">
-        <%= AppSetting.settings.home_content.html_safe %>
+        <% unless (content = AppSetting.settings.home_content).nil? %>
+          <%= content.html_safe %>
+        <% end %>
     </div>
 </div>
