@@ -3,48 +3,43 @@ Homebanking
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+Simple homebanking / account balance web interface for clients. Allows admins to create Clients with multiple Users, each Client can have more than one Account.
 
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
+Admin users can create and modify individual account movements or import Excel/CSV files with pre-defined columns to import multiple movements.
 
-Problems? Issues?
+Users can download account movement details into an Excel file.
+
+Provides basic content management for home page with rich text editor and image upload to [Cloudinary](http://cloudinary.com/).
+
+Screenshots
 -----------
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+![Login](/screenshots/login.jpg?raw=true "Login")
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
+![Accounts](/screenshots/accounts.jpg?raw=true "Accounts")
 
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+![Movements](/screenshots/movements.jpg?raw=true "Movements")
 
-Ruby on Rails
--------------
-
-This application requires:
+Overview
+--------
 
 - Ruby 2.3.1
-- Rails 4.2.0
+- Rails 4.2
+- Devise
+- Carrierwave
+- Cloudinary
+- Twitter Bootstrap
 
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
+Development
 ------------
 
-Credits
--------
+Run with:
+
+```
+heroku local
+```
 
 License
 -------
+
+Copyright Christian Hein 2016
