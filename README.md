@@ -30,6 +30,13 @@ Overview
 - Cloudinary
 - Twitter Bootstrap
 
+Set Up Cloudinary
+-----------------
+
+*TODO: Explain how to configure [Heroku Cloudinary Add-on](https://elements.heroku.com/addons/cloudinary)*
+
+Add CLOUDINARY_URL environment variable.
+
 Development
 ------------
 
