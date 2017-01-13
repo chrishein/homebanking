@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :account do
-    name "MyString"
-    currency "MyString"
+    name 'Account 1'
+    currency 'USD'
     client nil
   end
 end
