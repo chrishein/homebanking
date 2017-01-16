@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'Login page' do
-  let(:user) {FactoryGirl.create(:user)}
+  let(:user) {create(:user)}
 
   # Scenario: Visit the home page
   #   Given I am an unknown visitor
