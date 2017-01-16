@@ -5,6 +5,7 @@ FactoryGirl.define do
     password_confirmation 'password'
     confirmed_at Time.now
     role 'user'
+    clients { [create(:client)] }
   end
 
   factory :admin, class: User do

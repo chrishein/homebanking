@@ -4,6 +4,5 @@ FactoryGirl.define do
     concept 'Cash Deposit'
     credit '15000.00'
     balance '15000.00'
-    account nil
   end
 end
