@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature 'Login page' do
-  let(:user) {create(:user)}
-  let(:admin) {create(:admin)}
+  let(:user) { create(:user) }
+  let(:admin) { create(:admin) }
 
   # Scenario: Visit the home page
   #   Given I am an unknown visitor
