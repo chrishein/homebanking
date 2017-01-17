@@ -20,6 +20,7 @@ es:
     back: Volver
     are_you_sure: ¿Esta seguro?
     update: Guardar
+  no_clients_associated_error: Su usuario no tiene clientes o cuentas asociadas
   visitors:
     index:
       welcome: Bienvenido

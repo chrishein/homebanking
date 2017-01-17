@@ -12,7 +12,7 @@ class AccountsController < ApplicationController
       authorize! :show, @client
       @accounts = @client.accounts.paginate(page: params[:page], per_page: 50)
     elsif current_user.clients.empty?
-      flash[:error] = "You have no clients or accounts associated to your user"
+      flash[:error] = t(:no_clients_associated_error)
       @accounts = [].paginate(page: params[:page], per_page: 50)
     else
       @accounts = current_user.accounts.paginate(page: params[:page], per_page: 50)
